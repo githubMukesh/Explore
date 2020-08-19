@@ -3,8 +3,8 @@ import { map } from 'rxjs/operators';
 import {  } from 'rxjs/Observable'
 
 // observer pattern demo
- import './style.css';
- import './customObservable';
+//  import './style.css';
+//  import './customObservable';
 
 // observable demo
 // import './observable';
@@ -16,7 +16,7 @@ import {  } from 'rxjs/Observable'
 // import './observer';
 
 // newsPaper
-// import './newsPaper';
+import './newsPaper';
 
 // hot vs cold
 //import './hotvsCold'

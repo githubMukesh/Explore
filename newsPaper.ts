@@ -12,3 +12,24 @@ newsPaper.subscribe(hindustanTime);
 newsPaper.subscribe(theHindu);
 
 newsPaper.next("india Win the all world cup in all sports of the word");
+
+(function(){
+  let hindustanTimesButton = document.createElement('button');
+  hindustanTimesButton.innerHTML = 'HindustanTimes';
+  hindustanTimesButton.style.margin = '10px';
+  hindustanTimesButton.onclick = hindustanTime;
+
+  let hinduButton = document.createElement('button');
+  hinduButton.innerHTML = 'The Hindu';
+  hinduButton.onclick = theHindu;
+
+  let inputText = document.createElement('input');
+//  inputText.innerHTML = 'Send News';
+  inputText.type = "text";
+  inputText.setAttribute('type', 'text');
+  //inputText.onclick = theHindu;
+
+  document.body.appendChild(hindustanTimesButton);
+  document.body.appendChild(hinduButton);
+
+})();
