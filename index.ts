@@ -1,6 +1,6 @@
 import { of, Observable } from 'rxjs'; 
 import { map } from 'rxjs/operators';
-import {  } from 'rxjs/Observable'
+
 
 // observer pattern demo
 //  import './style.css';
@@ -13,10 +13,10 @@ import {  } from 'rxjs/Observable'
 // import './pullVsPush';
 
 // observer demo
-// import './observer';
+ import './observer';
 
 // newsPaper
-import './newsPaper';
+//import './newsPaper';
 
 // hot vs cold
 //import './hotvsCold'
