@@ -95,6 +95,42 @@
 
 
 
+.btn-bun-1 {
+    animation: burger  1s ease-in forwards;
+}
+.btn-tomato {
+    background:rgba(255,0, 0, 0.8);
+    padding: 10px;
+    border-radius: 20px;
+    animation: burger  1s ease-in forwards;
+}
+.btn-lettuce {
+    animation: burger  1s ease-in forwards;
+     padding: 10px;
+    border-radius: 20px;
+    background:rgba(0,255, 0, 0.5);
+}
+.btn-cheese {
+    animation: burger  1s ease-in forwards;
+     padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(238, 2555, 0, 0.9);
+}
+.btn-meat {
+    animation: burger  1s ease-in forwards;
+     padding: 13px;
+    border-radius: 20px;
+    background-color: rgba(139, 69,19, 0.8);
+}
+
+.btn-bun-2 {
+    animation: burger 1s ease-in forwards;
+     padding: 20px;
+    background-color: rgba(222, 184, 135, 1);
+    border-radius: 0 0 45% 45%;
+}
+
+
 
 
 @keyframes burger { 

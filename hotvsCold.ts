@@ -33,8 +33,20 @@ const subscription1 = foo.subscribe(async(response : Response)=> {
 const subscription3 = foo.subscribe(async(response : Response)=> {
   console.log("subscribtion 2" ,await response);
 });
-
 }
 
-hotObservable();
-//coldObservable();
+
+(function(){
+  let coldButton = document.createElement('button');
+  coldButton.innerHTML = 'Cold';
+  coldButton.style.margin = '10px';
+  coldButton.onclick = coldObservable;
+
+  let hotButton = document.createElement('button');
+  hotButton.innerHTML = 'HOT';
+  hotButton.onclick = hotObservable;
+
+   document.body.appendChild(coldButton);
+  document.body.appendChild(hotButton);
+
+})();
