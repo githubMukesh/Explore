@@ -1,32 +1,40 @@
-import { of, from, fromEvent } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
-const obs$ = from(['🍕', '🍪', '🍔', '🌭', '🍟']).pipe(map(val => {
-  return `Miam ${val}!`;
-}));
-console.clear();
-const sub1 = obs$.subscribe(val => {
-  console.log('From sub1:', val);
-}, null, () => {
-  console.log('done ----------------');
+ // Cold Observable 
+ export const coldObservable = () => {
+const foo = new Observable((subscriber) => {
+  const response =  fetch('https://reqres.in/api/users/2');
+  console.log('Calling from cold world');
+  subscriber.next(response);
+});
+ 
+const subscription1 = foo.subscribe(async(response : Response)=> {
+  console.log("subscribtion 1" ,await response);
+});
+const subscription2 = foo.subscribe(async(response : Response)=> {
+  console.log("subscribtion 2" ,await response);
+});
+ }
+
+
+
+// Hot Observable 
+export const hotObservable = () => {
+
+const response =  fetch('https://reqres.in/api/users/2');
+const foo = new Observable((subscriber) => {
+  console.log('Calling from hot world');
+  subscriber.next(response);
+});
+ 
+const subscription1 = foo.subscribe(async(response : Response)=> {
+  console.log("subscribtion 1" ,await response);
+});
+const subscription3 = foo.subscribe(async(response : Response)=> {
+  console.log("subscribtion 2" ,await response);
 });
 
-const sub2 = obs$.subscribe(val => {
-  console.log('From sub2:', val);
-}, null, () => {
-  console.log('done ----------------');
-});
+}
 
-/*---------------------------vs-------------------------------------------------------------- */ 
-
-const mouse$ = fromEvent(document, 'click').pipe(map((event: MouseEvent) => ({ clientX: event.clientX, clientY: event.clientY })));
-
-  const mouseSub1 = mouse$.subscribe(val => {
-  console.log('mouseSub1:', val);
-});
-setTimeout(() => {
-  console.log('Start sub2');
-  const mouseSub2 = mouse$.subscribe(val => {
-    console.log('mouseSub2After4000:', val);
-  });
-}, 4000);
+hotObservable();
+//coldObservable();

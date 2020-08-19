@@ -5,9 +5,9 @@ const foo = new Observable(subscriber => {
   subscriber.next(42);
 });
  
-foo.subscribe(x => {
+const subscription1 = foo.subscribe(x => {
   console.log(x);
 });
-foo.subscribe(y => {
+const subscription2  = foo.subscribe(y => {
   console.log(y);
 });

@@ -18,6 +18,8 @@ import {  } from 'rxjs/Observable'
 // newsPaper
 // import './newsPaper';
 
+// hot vs cold
+import './hotvsCold'
 // How to create plane obserable
 
 
