@@ -13,7 +13,7 @@ import { map } from 'rxjs/operators';
 // import './pullVsPush';
 
 // observer demo
- //import './observer';
+//import './observer';
 
 // newsPaper
 //import './newsPaper';

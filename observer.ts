@@ -1,4 +1,4 @@
-import {Observable} from 'rxjs';
+import {Observable, throwError} from 'rxjs';
 
 
 // Creating an Observable
@@ -7,7 +7,8 @@ const observable = Observable.create((observer:any) => {
     setInterval(() => {
         observer.next(++val)
         if(val === 7) {
-            observer.complete()
+            //observer.complete()
+            observer.error("oops Error Occured");
         }
     },1000)
 })  
