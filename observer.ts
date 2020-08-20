@@ -7,8 +7,8 @@ const observable = Observable.create((observer:any) => {
     setInterval(() => {
         observer.next(++val)
         if(val === 7) {
-            //observer.complete()
-            observer.error("oops Error Occured");
+           observer.complete();
+            //observer.error("oops Error Occured");
         }
     },1000)
 })  
