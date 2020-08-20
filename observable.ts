@@ -11,3 +11,5 @@ const subscription1 = foo.subscribe(x => {
 const subscription2  = foo.subscribe(y => {
   console.log(y);
 });
+
+console.log("End Complete")

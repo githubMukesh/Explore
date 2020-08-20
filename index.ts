@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 //  import './customObservable';
 
 // observable demo
-// import './observable';
+ import './observable';
 
 // pullVsPush demo
 // import './pullVsPush';
